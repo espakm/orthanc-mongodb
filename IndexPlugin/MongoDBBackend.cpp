@@ -180,7 +180,7 @@ namespace OrthancPlugins
   {
     using namespace bsoncxx::builder::stream;
    
-    std::scoped_lock lock(mutex_);
+    std::lock_guard<std::mutex> lock(mutex_);
 
     int64_t num = 1;
     auto collection = db["Sequences"];

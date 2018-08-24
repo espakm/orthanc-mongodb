@@ -36,7 +36,7 @@ ELSE ()
     include_directories(${BSONCXX_INCLUDE_DIRS})
     include_directories(${MONGOCXX_INCLUDE_DIRS})
     include_directories(${JSONCPP_INCLUDE_DIRS})
-    set(CMAKE_CXX_FLAGS "-std=c++17")
+    set(CMAKE_CXX_FLAGS "-std=c++14")
     #Linux specific switches
     IF (NOT APPLE)
       set (CMAKE_SHARED_LINKER_FLAGS "-Wl,-z,defs")
